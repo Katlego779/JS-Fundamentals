@@ -1,9 +1,10 @@
-const arg = parseInt(process.argv[2], 10);
+const arg = process.argv[2];
 
-if (Number.isNaN(arg) || arg <= 0) {
+if (!arg) {
   console.log("Missing number of occurrences");
 } else {
-  for (let i = 0; i < arg; i++) {
+  const times = parseInt(arg, 10);
+  for (let i = 0; i < times; i++) {
     console.log("C is fun");
   }
 }
